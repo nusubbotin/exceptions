@@ -1,7 +1,4 @@
-import car.Bus;
-import car.Car;
-import car.CargoCar;
-import car.Transport;
+import car.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,7 +17,18 @@ public class Main {
             System.out.println(car);
         }
 
+        DriverB schumacherB = new DriverB("Шумахер", 30);
+        Car cur = (Car) cars[0];
 
+        DriverC schumacherC = new DriverC("Чемптон мира Дакар", 15);
+        CargoCar cargoCar = (CargoCar) cars[6];
+
+        DriverD schumacherD = new DriverD("Лучший шоссейный водитель года", 10);
+        Bus bus = (Bus) cars[3];
+
+        for (Transport car : cars) {
+            //...
+        }
     }
 
     private static void task1() {
