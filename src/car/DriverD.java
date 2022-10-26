@@ -6,7 +6,7 @@ public class DriverD <T extends Bus> extends Driver {
     private final char driverCategory = 'D';
 
     public DriverD(String fullName, int experience) {
-        super(fullName, experience);
+        super(DriverCategory.D.getName(), fullName, experience);
     }
 
     public void toRule(T bus){
@@ -15,6 +15,10 @@ public class DriverD <T extends Bus> extends Driver {
         bus.pitStop();
         bus.bestCircleTime();
         bus.maximumSpeed();
+    }
+
+    public char getDriverCategory() {
+        return driverCategory;
     }
 
     @Override

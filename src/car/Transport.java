@@ -53,6 +53,10 @@ public abstract class Transport {
         }
     }
 
+    public void checkDriverLicense (Driver driver ){
+        System.out.println("По умолчанию проверка водительских прав не требуется");
+    }
+
     @Override
     public String toString() {
         return "brand = " + brand + ", model = " + model + ", engineVolume = " + engineVolume;

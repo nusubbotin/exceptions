@@ -3,10 +3,9 @@ package car;
 import java.util.Objects;
 
 public class DriverC <T extends CargoCar> extends Driver {
-    private final char driverCategory = 'C';
 
     public DriverC(String fullName, int experience) {
-        super(fullName, experience);
+        super(DriverCategory.C.getName(), fullName, experience);
     }
 
     public void toRule(T cargoCar){
@@ -15,6 +14,10 @@ public class DriverC <T extends CargoCar> extends Driver {
         cargoCar.pitStop();
         cargoCar.bestCircleTime();
         cargoCar.maximumSpeed();
+    }
+
+    public char getDriverCategory() {
+        return driverCategory;
     }
 
     @Override

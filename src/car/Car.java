@@ -37,6 +37,16 @@ public class Car extends Transport implements CompetingTransport  {
                 '}';
     }
 
+    public void checkDriverLicense (DriverB driver ){
+        for (Driver.DriverCategory value : Driver.DriverCategory.values()) {
+            if (value.getName() == driver.getDriverCategory()) {
+                System.out.println("Проверка прав для водителя: " + driver.getFullName() + " прошла успешно!");
+                return;
+            }
+        }
+        throw new IllegalArgumentException("Указанный тип прав не существует");
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

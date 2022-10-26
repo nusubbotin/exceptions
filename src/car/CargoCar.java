@@ -29,6 +29,16 @@ public class CargoCar extends Transport implements CompetingTransport{
         System.out.println("Запросить информацию со спутника по максимальной скорости");
     }
 
+    public void checkDriverLicense (DriverC driver ){
+        for (Driver.DriverCategory value : Driver.DriverCategory.values()) {
+            if (value.getName() == driver.getDriverCategory()) {
+                System.out.println("Проверка прав для водителя: " + driver.getFullName() + " прошла успешно!");
+                return;
+            }
+        }
+        throw new IllegalArgumentException("Указанный тип прав не существует");
+    }
+
     @Override
     public String toString() {
         return "CargoCar{" +
